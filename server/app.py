@@ -1,17 +1,20 @@
 from datetime import datetime
 
+from flask import Flask, jsonify
+from flask.cli import with_appcontext
+from flask_cors import CORS, cross_origin
+from flask_migrate import Migrate
+
 from api.player import player_route
 from config import URL_PREFIX, VERSION, Config
 from db.client import db
 from db.seed.data import PLAYERS
-from flask import Flask, jsonify
-from flask.cli import with_appcontext
-from flask_migrate import Migrate
 from schemas.client import ma
 
 
 def create_app(config_class=Config):
     app = Flask(__name__)
+    CORS(app)
     app.config.from_object(config_class)
     migrate = Migrate(app, db)
     db.init_app(app)

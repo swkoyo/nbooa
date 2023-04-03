@@ -1,5 +1,7 @@
-from config import URL_PREFIX
 from flask import Blueprint, request
+from flask_cors import cross_origin
+
+from config import URL_PREFIX
 from services import player_service
 
 player_route = Blueprint("player_route", __name__, url_prefix=f"/{URL_PREFIX}/players")
