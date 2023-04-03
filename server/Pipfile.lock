@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "209901e26e18b2c011b4a77fad1c345deeae9c6d5384ae20dab7bfa792200dff"
+            "sha256": "57676ad49e18b6b2c9657bb57147f17577adfeab70c798ba3d6f86da3b7f2320"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -143,6 +143,14 @@
             ],
             "index": "pypi",
             "version": "==2.2.3"
+        },
+        "flask-marshmallow": {
+            "hashes": [
+                "sha256:2adcd782b5a4a6c5ae3c96701f320d8ca6997995a52b2661093c56cc3ed24754",
+                "sha256:bd01a6372cbe50e36f205cfff0fc5dab0b7b662c4c8b2c4fc06a3151b2950950"
+            ],
+            "index": "pypi",
+            "version": "==0.14.0"
         },
         "flask-migrate": {
             "hashes": [
@@ -314,6 +322,22 @@
             "markers": "python_version >= '3.7'",
             "version": "==2.1.2"
         },
+        "marshmallow": {
+            "hashes": [
+                "sha256:90032c0fd650ce94b6ec6dc8dfeb0e3ff50c144586462c389b81a07205bedb78",
+                "sha256:93f0958568da045b0021ec6aeb7ac37c81bfcccbb9a0e7ed8559885070b3a19b"
+            ],
+            "markers": "python_version >= '3.7'",
+            "version": "==3.19.0"
+        },
+        "marshmallow-sqlalchemy": {
+            "hashes": [
+                "sha256:3523a774390ef0c1c0f7c708a7519809c5396cf608720f14f55c36f74ff5bbec",
+                "sha256:3cee0bf61ed10687c0a41448e1916649b28222334a02f7b937c39d1c69c18bee"
+            ],
+            "index": "pypi",
+            "version": "==0.29.0"
+        },
         "nba-api": {
             "hashes": [
                 "sha256:05a5274653035752a408860f6caaada3f4a1a28a15431080668b24c9a5bb6342",
@@ -355,6 +379,14 @@
             ],
             "markers": "python_version >= '3.8'",
             "version": "==1.24.2"
+        },
+        "packaging": {
+            "hashes": [
+                "sha256:714ac14496c3e68c99c29b00845f7a2b85f3bb6f1078fd9f72fd20f0570002b2",
+                "sha256:b6ad297f8907de0fa2fe1ccbd26fdaf387f5f47c7275fedf8cce89f99446cf97"
+            ],
+            "markers": "python_version >= '3.7'",
+            "version": "==23.0"
         },
         "pandas": {
             "hashes": [

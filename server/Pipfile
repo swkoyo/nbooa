@@ -12,6 +12,8 @@ alembic = "*"
 pandas = "*"
 bs4 = "*"
 flask-migrate = "*"
+flask-marshmallow = "*"
+marshmallow-sqlalchemy = "*"
 
 [dev-packages]
 
