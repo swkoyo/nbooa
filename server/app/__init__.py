@@ -31,6 +31,9 @@ def create_app(config_class=Config):
                 last_name=player["last_name"],
                 birthday=datetime(int(y), int(m), int(d)),
                 image_url=player["image_url"],
+                _id=player["_id"],
+                start_year=player["start_year"],
+                end_year=player["end_year"],
             )
             db.session.add(new_player)
             db.session.commit()

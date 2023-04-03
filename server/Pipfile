@@ -9,6 +9,8 @@ flask = "*"
 python-dotenv = "*"
 flask-sqlalchemy = "*"
 alembic = "*"
+pandas = "*"
+bs4 = "*"
 
 [dev-packages]
 
