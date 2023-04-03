@@ -14,6 +14,8 @@ bs4 = "*"
 flask-migrate = "*"
 flask-marshmallow = "*"
 marshmallow-sqlalchemy = "*"
+lxml = "*"
+html5lib = "*"
 
 [dev-packages]
 
