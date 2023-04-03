@@ -11,6 +11,7 @@ flask-sqlalchemy = "*"
 alembic = "*"
 pandas = "*"
 bs4 = "*"
+flask-migrate = "*"
 
 [dev-packages]
 
