@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import router from '@/router';
 import MainContainer from '../layouts/MainContainer.vue'
 </script>
 
@@ -11,7 +12,7 @@ import MainContainer from '../layouts/MainContainer.vue'
           <h3 class='text-lg'>Ever wonder how many points LeBron scored on his birthday? How about on Valentine's? NBooA
             allows you to view player stats that you'll never need.</h3>
         </div>
-        <button class='bg-blue-400 rounded-full p-2 text-sm text-white'>
+        <button @click="router.push('/players')" class='bg-blue-400 rounded-full p-2 text-sm text-white'>
           View Players
         </button>
       </div>
