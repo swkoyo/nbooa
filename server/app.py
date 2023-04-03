@@ -1,22 +1,21 @@
 from datetime import datetime
 
-from app.extensions import db
-from app.models.player import Player
+from api.player import player_route
 from config import URL_PREFIX, VERSION, Config
+from db.client import db
+from db.seed.data import PLAYERS
 from flask import Flask, jsonify
 from flask.cli import with_appcontext
-from seeders.data import PLAYERS
+from flask_migrate import Migrate
 
 
 def create_app(config_class=Config):
     app = Flask(__name__)
     app.config.from_object(config_class)
-
+    migrate = Migrate(app, db)
     db.init_app(app)
 
-    # from main import bp as main_bp
-
-    # app.register_blueprint(main_bp)
+    app.register_blueprint(player_route)
 
     @app.route(f"/{URL_PREFIX}/health")
     def get_health():
