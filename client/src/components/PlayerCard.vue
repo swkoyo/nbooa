@@ -10,7 +10,7 @@ defineProps<{
 <template>
     <div class='flex flex-col shadow-lg border border-slate-700 rounded-md'>
         <img class='bg-black bg-opacity-60 rounded-t-md' :src="player.image_url" />
-        <div class='flex flex-col p-6 space-y-10'>
+        <div class='flex flex-col p-6 space-y-8'>
             <div class='flex w-full'>
                 <div class='flex flex-col basis-1/2 font-light'>
                     <p>Name</p>
