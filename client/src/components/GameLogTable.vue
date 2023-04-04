@@ -9,8 +9,8 @@ defineProps<{
 </script>
 
 <template>
-    <div class='inline-block min-w-full bg-white p-4 rounded-md shadow-md'>
-        <h1 class='text-xl'>{{ startCase(title) }}</h1>
+    <div class='inline-block min-w-full p-4 rounded-md shadow-md'>
+        <h1 class='text-xl font-bold pb-2'>{{ startCase(title) }}</h1>
         <table class='table-auto min-w-full text-left font-light text-xs'>
             <thead class='border-b font-medium'>
                 <tr>
