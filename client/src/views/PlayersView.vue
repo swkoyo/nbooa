@@ -25,8 +25,7 @@ onMounted(async () => {
       <LoadSpinner />
     </section>
     <section v-else>
-      <p>Players</p>
-      <div class='grid grid-cols-4 gap-4'>
+      <div class='grid grid-cols-3 gap-4'>
         <PlayerCard v-for="player of players" :key="player.id" :player="player" />
       </div>
     </section>
