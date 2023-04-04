@@ -5,7 +5,7 @@ import NavBar from '../components/NavBar.vue'
 <template>
     <main class='bg-gray-300'>
         <NavBar />
-        <div class='flex flex-col w-full min-h-screen h-full max-w-7xl mx-auto px-10 pt-24'>
+        <div class='flex flex-col w-full min-h-screen h-full max-w-7xl mx-auto px-10 pt-24 pb-8'>
             <slot></slot>
         </div>
     </main>

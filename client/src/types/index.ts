@@ -25,7 +25,7 @@ export interface GameLog {
     PF: number;
     PTS: number;
     REB: number;
-    RESULT: string;
+    Result: string;
     STL: number;
     TO: number;
 }

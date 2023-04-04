@@ -1,6 +1,7 @@
 <script setup lang='ts'>
 import MainContainer from '../layouts/MainContainer.vue'
 import PlayerCard from '../components/PlayerCard.vue'
+import LoadSpinner from '@/components/LoadSpinner.vue'
 import { onMounted, ref } from 'vue';
 import { getPlayers } from '../api'
 import type { Player } from '@/types';
@@ -20,10 +21,13 @@ onMounted(async () => {
 
 <template>
   <MainContainer>
-    <section>
+    <section v-if="!players">
+      <LoadSpinner />
+    </section>
+    <section v-else>
       <p>Players</p>
       <div class='grid grid-cols-4 gap-4'>
-        <PlayerCard v-for="player in players" :key="player.id" :player="player" />
+        <PlayerCard v-for="player of players" :key="player.id" :player="player" />
       </div>
     </section>
   </MainContainer>
