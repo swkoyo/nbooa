@@ -12,13 +12,13 @@ import MainContainer from '../layouts/MainContainer.vue'
           <h3 class='text-lg'>Ever wonder how many points LeBron scored on his birthday? How about on Valentine's? NBooA
             allows you to view player stats that you'll never need.</h3>
         </div>
-        <button @click="router.push('/players')" class='bg-indigo-500 rounded-full p-2 text-sm text-white'>
+        <button @click="router.push('/players')"
+          class='bg-indigo-500 rounded-full px-5 py-3 hover:bg-opacity-50 text-sm text-white'>
           View Players
         </button>
       </div>
       <div class="basis-1/2 p-4">
-        <img
-          src="https://advancelocal-adapter-image-uploads.s3.amazonaws.com/image.cleveland.com/home/cleve-media/width2048/img/datacentral/photo/lebron-james-birthday-09192d395471f026.jpg" />
+        <img src="../assets/lebron-bday.png" />
       </div>
     </div>
   </MainContainer>
