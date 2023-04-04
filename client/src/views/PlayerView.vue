@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { getPlayer } from '../api'
 import type { PlayerWithGameLog } from '@/types'
-import { onMounted, ref, defineProps } from 'vue';
+import { onMounted, ref } from 'vue';
 import PlayerHero from '../components/PlayerHero.vue'
 import MainContainer from '../layouts/MainContainer.vue'
 import GameLogTable from '@/components/GameLogTable.vue'

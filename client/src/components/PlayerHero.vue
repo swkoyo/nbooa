@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import type { Player } from '@/types';
 import { formatDate } from '@/utils/date'
-import { defineProps } from 'vue';
 defineProps<{
     player: Player
 }>()

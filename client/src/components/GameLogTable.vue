@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { GameLog } from '@/types'
-import { defineProps } from 'vue'
 defineProps<{
     title: string;
     gameLog: GameLog | null
