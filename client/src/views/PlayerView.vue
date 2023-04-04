@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { getPlayer } from '../api'
 import type { PlayerWithGameLog } from '@/types'
-import { onMounted, ref } from 'vue';
+import { onMounted, ref, defineProps } from 'vue';
+import PlayerHero from '../components/PlayerHero.vue'
 import MainContainer from '../layouts/MainContainer.vue'
+import GameLogTable from '@/components/GameLogTable.vue'
 const props = defineProps<{
     _id: string
 }>()
@@ -23,6 +25,9 @@ onMounted(async () => {
 
 <template>
     <MainContainer>
-        {{ player }}
+        <PlayerHero v-if="player" :player="player" />
+        <div v-if="player">
+            <GameLogTable v-for="(gameLog, title) in player.game_logs" :key="title" :gameLog="gameLog" :title="title" />
+        </div>
     </MainContainer>
 </template>

@@ -2,6 +2,7 @@
 import type { Player } from '../types'
 import { formatDate } from '../utils/date'
 import router from '@/router';
+import { defineProps } from 'vue';
 defineProps<{
     player: Player
 }>()
