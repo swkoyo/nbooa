@@ -4,7 +4,7 @@ import router from '@/router';
 
 <template>
     <nav>
-        <div class='w-full dark:bg-slate-900 absolute top-0 p-4'>
+        <div class='w-full bg-slate-900 absolute top-0 p-4'>
             <div class='flex flex-row w-full max-w-7xl mx-auto'>
                 <div @click="router.push('/')" class="inline-flex items-center space-x-2 hover:cursor-pointer">
                     <img class='h-10' src="../assets/logo.png" />
