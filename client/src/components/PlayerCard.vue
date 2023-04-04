@@ -1,13 +1,14 @@
 <script setup lang="ts">
 import type { Player } from '../types'
 import { formatDate } from '../utils/date'
+import router from '@/router';
 defineProps<{
     player: Player
 }>()
 </script>
 
 <template>
-    <div class='shadow-md bg-gray-50 p-4 rounded-lg'>
+    <div @click="router.push(`/players/${player._id}`)" class='shadow-md bg-gray-50 p-4 rounded-lg'>
         <img :src="player.image_url" />
         <p>{{ player.first_name }} {{ player.last_name }}</p>
         <p>{{ formatDate(player.birthday) }}</p>
