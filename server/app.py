@@ -1,14 +1,13 @@
 from datetime import datetime
 
-from flask import Flask, jsonify
-from flask.cli import with_appcontext
-from flask_cors import CORS, cross_origin
-from flask_migrate import Migrate
-
 from api.player import player_route
 from config import URL_PREFIX, VERSION, Config
 from db.client import db
 from db.seed.data import PLAYERS
+from flask import Flask, jsonify
+from flask.cli import with_appcontext
+from flask_cors import CORS, cross_origin
+from flask_migrate import Migrate
 from models.player import Player
 from schemas.client import ma
 
@@ -30,15 +29,17 @@ def get_health():
 @app.cli.command("seed")
 def seed():
     for player in PLAYERS:
-        m, d, y = player["birthday"].split("-")
-        new_player = Player(
-            first_name=player["first_name"],
-            last_name=player["last_name"],
-            birthday=datetime(int(y), int(m), int(d)),
-            image_url=player["image_url"],
-            _id=player["_id"],
-            start_year=player["start_year"],
-            end_year=player["end_year"],
-        )
-        db.session.add(new_player)
-        db.session.commit()
+        existing_player = Player.query.filter_by(_id=player["_id"]).first()
+        if not existing_player:
+            m, d, y = player["birthday"].split("-")
+            new_player = Player(
+                first_name=player["first_name"],
+                last_name=player["last_name"],
+                birthday=datetime(int(y), int(m), int(d)),
+                image_url=player["image_url"],
+                _id=player["_id"],
+                start_year=player["start_year"],
+                end_year=player["end_year"],
+            )
+            db.session.add(new_player)
+            db.session.commit()
