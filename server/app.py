@@ -9,12 +9,13 @@ from api.player import player_route
 from config import URL_PREFIX, VERSION, Config
 from db.client import db
 from db.seed.data import PLAYERS
+from models.player import Player
 from schemas.client import ma
 
 app = Flask(__name__)
 CORS(app)
 app.config.from_object(Config)
-migrate = Migrate(app, db)
+migrate = Migrate(app, db, directory="db/migrations")
 db.init_app(app)
 ma.init_app(app)
 
