@@ -17,6 +17,7 @@ marshmallow-sqlalchemy = "*"
 lxml = "*"
 html5lib = "*"
 flask-cors = "*"
+gunicorn = "*"
 
 [dev-packages]
 
