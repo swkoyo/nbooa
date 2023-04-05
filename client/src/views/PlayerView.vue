@@ -28,7 +28,7 @@ onMounted(async () => {
     <MainContainer>
         <section v-if="error">
             <div class='w-full text-center text-xl space-y-5'>
-                <h1>An error occured!</h1>
+                <h1>An error occurred!</h1>
                 <button @click="router.replace('/players')"
                     class='bg-indigo-500 rounded-full text-sm px-3 py-2 hover:bg-opacity-50'>Go
                     back</button>

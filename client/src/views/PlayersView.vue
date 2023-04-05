@@ -7,13 +7,14 @@ import { getPlayers } from '../api'
 import type { Player } from '@/types';
 
 const players = ref<Player[]>([])
+const error = ref<boolean>(false)
 
 onMounted(async () => {
   try {
     const data = await getPlayers();
     players.value = data;
   } catch (err) {
-    console.log(err)
+    error.value = true
   }
 })
 
@@ -21,7 +22,12 @@ onMounted(async () => {
 
 <template>
   <MainContainer>
-    <section v-if="!players">
+    <section v-if="error">
+      <div class='w-full text-center text-xl space-y-5'>
+        <h1>An error occurred! Please try again later</h1>
+      </div>
+    </section>
+    <section v-else-if="players.length === 0">
       <LoadSpinner />
     </section>
     <section v-else>
